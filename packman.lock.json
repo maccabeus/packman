@@ -1,16 +1,19 @@
 {
     "info": {
-        "hash": {
-            "sha256": "8e1fa4cebfb362d534adf1f4e4dbd8e9fa3332fd94ae9f4df6e5e2ccc61ffa2d"
-        }
+        "hash": "8e1fa4cebfb362d534adf1f4e4dbd8e9fa3332fd94ae9f4df6e5e2ccc61ffa2d"
     },
     "userfonts": {
         "hashes": [
             "43d91c79d6c32a29efae0b8effda4b3e219850eca76a060c1c92498c860fddddssss3",
-            "43d91c79d6c32a29efae0b8effda4b3e219850eca76a060c1c92498c860fbf63",
             "43d91c79d6c32a29efae0b8effda4b3e219850eca76a060c1c92498c860fbf63"
         ],
-        "version": "==21.4.0"
+        "version": "==21.4.0",
+        "tracks": {
+            "43d91c79d6c32a29efae0b8effda4b3e219850eca76a060c1c92498c860fddddssss3": {
+                "soaps": ">=1.0.1",
+                "anotherpackage": ">=1.0.12"
+            }
+        }
     },
     "dev": {}
 }
