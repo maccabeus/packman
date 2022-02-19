@@ -1,0 +1,6 @@
+
+
+COMMANDS
+
+1.  App will create packman.json file 
+2. App will create packman.lock file

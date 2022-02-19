@@ -1,0 +1,30 @@
+{
+    "userfonts": {
+        "version": "1.0.0",
+        "dep_mode": false,
+        "deps": {
+            "soaps": [
+                "@>=",
+                "1.0.1"
+            ],
+            "anotherpackage": [
+                "@>=",
+                "1.0.1"
+            ]
+        }
+    }, 
+    "userfonts2": {
+        "version": "1.0.0",
+        "dep_mode": true,
+        "deps": {
+            "userfont1": [
+                "@>=",
+                "1.0.1"
+            ],
+            "anotherpackage": [
+                "@>=",
+                "1.0.1"
+            ]
+        }
+    }
+}
