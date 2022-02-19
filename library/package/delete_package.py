@@ -10,7 +10,7 @@ class DeletePackage(PackageInterface):
         """
         print("delete package")
 
-    def set_set_name(self, package_name: str) -> None:
+    def set_name(self, package_name: str) -> None:
         """Set the name of the package to work on
         """
         self.__package_name = package_name

@@ -6,7 +6,9 @@
     },
     "userfonts": {
         "hashes": [
-            "sha256:2d27e3784d7a565d36ab851fe94887c5eccd6a463168875832a1be79c82828b4"
+            "43d91c79d6c32a29efae0b8effda4b3e219850eca76a060c1c92498c860fddddssss3",
+            "43d91c79d6c32a29efae0b8effda4b3e219850eca76a060c1c92498c860fbf63",
+            "43d91c79d6c32a29efae0b8effda4b3e219850eca76a060c1c92498c860fbf63"
         ],
         "version": "==21.4.0"
     },
