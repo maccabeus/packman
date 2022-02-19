@@ -14,3 +14,6 @@ class PackageInterface(ABC):
     def set_name(self, package_name: str) -> None:
         """Set the name of the package to work on
         """
+
+    def create_hash(hashable_keys: dict) -> str:
+        pass

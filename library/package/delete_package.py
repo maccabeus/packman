@@ -1,5 +1,5 @@
+from hashlib import sha256
 from library.package.package_interface import PackageInterface
-
 
 class DeletePackage(PackageInterface):
     """The package Instance

@@ -4,3 +4,10 @@ COMMANDS
 
 1.  App will create packman.json file 
 2. App will create packman.lock file
+
+
+Installer Implementation:
+1. Read  the packman and packman.lock files 
+2. create hash with package.json file "userfonts" infos and compare with hash in lock file
+3. if hash is not same, use package.json information for Installer
+4. else, use the packman.lock info for installation, since no change detected

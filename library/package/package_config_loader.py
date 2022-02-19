@@ -4,10 +4,15 @@ from pathlib import Path
 
 
 class PackageConfigLoader():
+
+    __package_path: str
+    __package_name: str
+    __package_path: str = "./"
+
     """Package configurations loader
-    """
+  """
     @staticmethod
-    def load_package_info(package_name: str, package_version: str = None, package_file_name: str = "packman.json") -> dict:
+    def load_package_info(package_name: str, package_file_name: str = "packman.json") -> dict:
         """load package list
 
         Args:
@@ -16,26 +21,23 @@ class PackageConfigLoader():
             package_file_name (str, optional): _description_. Defaults to "packman.json".
         """
         PackageConfigLoader.__package_name = package_name
-        PackageConfigLoader.__version = package_version
-        PackageConfigLoader.__package_path = "./"+package_file_name
+        full_path = PackageConfigLoader.__package_path + package_file_name
 
-        with open(PackageConfigLoader.__package_path) as installed_packages:
-            package_list = PackageConfigLoader.__read_and_parse_file(
-                PackageConfigLoader.__package_path,
-                PackageConfigLoader.__package_name
-            )
-            print(package_list)
-            return package_list if package_list else dict()
+        package_list = PackageConfigLoader.__read_and_parse_file(
+            full_path,
+            PackageConfigLoader.__package_name
+        )
+        return package_list if package_list else dict()
 
     @staticmethod
-    def load_package_dot_lock(lock_file_name: str = "packman.lock.json") -> dict:
-        with open(PackageConfigLoader.__package_path) as installed_packages:
-            package_list = PackageConfigLoader.__read_and_parse_file(
-                PackageConfigLoader.__package_path,
-                PackageConfigLoader.__package_name
-            )
-            print(package_list)
-            return package_list if package_list else dict()
+    def load_package_dot_lock(package_name: str= None, lock_file_name: str = "packman.lock.json") -> dict:
+        full_path = PackageConfigLoader.__package_path + lock_file_name
+
+        package_list = PackageConfigLoader.__read_and_parse_file(
+            full_path,
+            package_name
+        )
+        return package_list if package_list else dict()
 
     def __read_and_parse_file(file_path: str, load_index: str = None) -> dict:
         """Load a file and parse  keys as dictionary object
